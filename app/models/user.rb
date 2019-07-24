@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  # def name
-  #   return username ? username :email
-  # end
+  def name
+    return username ? username : email
+  end
 end

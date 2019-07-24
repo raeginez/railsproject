@@ -6,5 +6,11 @@
     <p><%= link_to "heels", items_heels_path %> </p>
     <p><%= link_to "Trainers", items_trainers_path %> </p>
     </ul>
+
+    <% if user_signed_in? %>
+   <div id="logout"><%= link_to 'Logout', destroy_user_session_path, method: "delete",class:"top-nav-link"%></div>
+   <div id="username"><%= current_user.name %></div>
+    <% else %>
+    <%end%>
 </div>
 
