@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  resources :listings
   devise_for :users
-  root 'homepage#home'
+  root 'listings#index'
 
   get 'items/boots', to: 'homepage#boots'
   get 'items/flats', to: 'homepage#flats'
