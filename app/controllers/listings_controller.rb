@@ -25,6 +25,7 @@ class ListingsController < ApplicationController
   # POST /listings.json
   def create
     @listing = Listing.new(listing_params)
+    @listing.image.attach(params[:listing][:image])
 
     respond_to do |format|
       if @listing.save

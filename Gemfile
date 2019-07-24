@@ -61,4 +61,9 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# Adding in Devise Gem for User Authentication
 gem "devise", "~> 4.6"
+
+# Adding in Cloudinary and Active-Storage Gems for User to upoad Images
+gem 'cloudinary', require: true
+gem 'activestorage-cloudinary-service'
