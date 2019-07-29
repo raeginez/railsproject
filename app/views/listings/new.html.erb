@@ -1,15 +1,6 @@
 <h1>New Listing</h1>
 
 <%= form_with model: @listing, local: true do |f| %>
-<%= f.select :category, options_for_select(["Please select...", "Flats", "Boots",
-"Trainers", "Heels"]) %>
-<% end %>
-
-<%=form_with model: @listing, local: true do |form|%>
-<p>
-  <%= form.label :image %>
-  <%= form.file_field :image %>
-</p>
 <%end%>
 
 <%= render 'form', listing: @listing %>
