@@ -1,13 +1,12 @@
 class OrdersController < ApplicationController
   def new
     @listing = Listing.find(params[:listing_id])
-
+    # Adding Stripe 
     Stripe.api_key = Rails.application.credentials.dig(:stripe, :api_key)
     @session = Stripe::Checkout::Session.create(
     payment_method_types: ['card'],
     line_items: [{
     name: @listing.name,
-    # description: "by #{@book.author.name}",
     images: ['https://example.com/t-shirt.png'],
     amount: (@listing.price * 100).to_i,
     currency: 'aud',
