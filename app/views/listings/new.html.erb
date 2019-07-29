@@ -2,10 +2,18 @@
 
 <%= render 'form', listing: @listing %>
 
+<<<<<<< HEAD
 <%=form_with model: @listing, local: true do |form|%>
 <p>
   <%= form.label :image %>
   <%= form.file_field :image %>
 </p>
 <%end%>
+=======
+<%= form_with model: @listing, local: true do |f| %>
+<%= f.select :category, options_for_select(["Please select...", "Flats", "Boots",
+"Trainers", "Heels"]) %>
+<% end %>
+
+>>>>>>> ad5bde734df5e4c8bab639abf896c0cb820bbe8d
 <%= link_to 'Back', listings_path %>
