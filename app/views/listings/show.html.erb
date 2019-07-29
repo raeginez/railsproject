@@ -5,14 +5,11 @@
   <%= @listing.name %>
 </p>
 
-
 <p>
   <% if @listing.image.attached?%>
   <%= image_tag @listing.image, width: 120 %>
   <%end%>
 </p>
-
-
 
 <p>
   <strong>Description:</strong>
