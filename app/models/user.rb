@@ -4,6 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :purchased_listings, through: :orders
+  has_many :listings
+  has_many :orders
+  
   def name
     return username ? username : email
   end
