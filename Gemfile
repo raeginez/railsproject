@@ -67,3 +67,6 @@ gem "devise", "~> 4.6"
 # Adding in Cloudinary and Active-Storage Gems for User to upoad Images
 gem 'cloudinary', require: true
 gem 'activestorage-cloudinary-service'
+
+#Adding in Stripe for online payment service
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'

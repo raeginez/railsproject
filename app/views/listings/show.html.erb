@@ -21,5 +21,9 @@
   <%= @listing.price %>
 </p>
 
+<p>
+  <%= link_to "Buy now", new_order_path(listing_id: @listing.id) %>
+</p>
+
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
 <%= link_to 'Back', listings_path %>
