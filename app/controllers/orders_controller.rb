@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!
   def new
     @listing = Listing.find(params[:listing_id])
     # Adding Stripe 
