@@ -1,6 +1,7 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:edit, :update, :destroy, :new]
+  #efore_action :set_listing, only: [:edit, :update, :destroy]
 
   # GET /listings
   # GET /listings.json
@@ -16,18 +17,16 @@ class ListingsController < ApplicationController
   # GET /listings/new
   def new
     @listing = Listing.new
-    #@listing = current_user.listings.build
   end
 
   # GET /listings/1/edit
   def edit
-    #@listing = Listing.find(params[:id])
+    @listing = current_user.listings.find(params[:id])
   end
 
   # POST /listings
   # POST /listings.json
   def create
-    #@listing = current_user.listings.build(post_params)
     @listing = Listing.new(listing_params)
     @listing.image.attach(params[:listing][:image])
     @listing.user = current_user
@@ -46,7 +45,7 @@ class ListingsController < ApplicationController
   # PATCH/PUT /listings/1
   # PATCH/PUT /listings/1.json
   def update
-    #@listing = Listing.find(params[:id])
+    @listing = current_user.listings.find(params[:id])
     respond_to do |format|
       if @listing.update(listing_params)
         format.html { redirect_to @listing, notice: 'Listing was successfully updated.' }
@@ -61,7 +60,7 @@ class ListingsController < ApplicationController
   # DELETE /listings/1
   # DELETE /listings/1.json
   def destroy
-    #@listing = Listing.find(params[:id])
+    @listing = current_user.listings.find(params[:id])
     @listing.destroy
     respond_to do |format|
       format.html { redirect_to listings_url, notice: 'Item was successfully deleted.' }
