@@ -1,1 +1,9 @@
-<h1> This is the page for boots </h1>
+<h1> BOOTS </h1>
+
+<ul><% @listing.each do |listing| %>
+    <li><%= listing.name %>
+    <%= listing.description %>
+    <%= listing.price %>
+    <% end %>
+    </li>
+</ul>

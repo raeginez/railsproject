@@ -1,1 +1,9 @@
 <h1> This is the Home page </h1>
+
+<ul><% @listing.each do |listing| %>
+    <li><%= listing.name %>
+    <%= listing.description %>
+    <%= listing.price %>
+    <% end %>
+    </li>
+</ul>

@@ -1,1 +1,9 @@
-<h1>This is the page for trainers</h1>
+<h1>TRAINERS</h1>
+
+<ul><% @listing.each do |listing| %>
+    <li><%= listing.name %>
+    <%= listing.description %>
+    <%= listing.price %>
+    <% end %>
+    </li>
+</ul>
