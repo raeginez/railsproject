@@ -2,10 +2,7 @@
 
 <%= render 'form', listing: @listing %>
 
-<%= form_with model: @listing, local: true do |f| %>
-<%= f.select :category, options_for_select(["Please select...", "Flats", "Boots",
-"Trainers", "Heels"]) %>
-<% end %>
+
 
 <%= link_to 'Show', @listing %> |
 <%= link_to 'Back', listings_path %>
