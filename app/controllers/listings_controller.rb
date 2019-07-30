@@ -30,6 +30,7 @@ class ListingsController < ApplicationController
     #@listing = current_user.listings.build(post_params)
     @listing = Listing.new(listing_params)
     @listing.image.attach(params[:listing][:image])
+    @listing.user = current_user
 
     respond_to do |format|
       if @listing.save
@@ -76,6 +77,6 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:name, :description, :price)
+      params.require(:listing).permit(:name, :description, :price, :category)
     end
 end
