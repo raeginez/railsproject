@@ -28,12 +28,15 @@ RSpec.describe ListingsController, type: :controller do
   # This should return the minimal set of attributes required to create a valid
   # Listing. As you add validations to Listing, be sure to
   # adjust the attributes here as well.
+  let(:user) {
+    User.create!(email: "example@email.com", password: "example123", username: "example")
+  }
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {name: "example item", price: 1.00, description: "This is a test", user: user }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {name: nil, price: nil, user: user }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -59,6 +62,7 @@ RSpec.describe ListingsController, type: :controller do
 
   describe "GET #new" do
     it "returns a success response" do
+      sign_in user
       get :new, params: {}, session: valid_session
       expect(response).to be_successful
     end
@@ -66,6 +70,7 @@ RSpec.describe ListingsController, type: :controller do
 
   describe "GET #edit" do
     it "returns a success response" do
+      sign_in user
       listing = Listing.create! valid_attributes
       get :edit, params: {id: listing.to_param}, session: valid_session
       expect(response).to be_successful
@@ -75,12 +80,14 @@ RSpec.describe ListingsController, type: :controller do
   describe "POST #create" do
     context "with valid params" do
       it "creates a new Listing" do
+        sign_in user
         expect {
           post :create, params: {listing: valid_attributes}, session: valid_session
         }.to change(Listing, :count).by(1)
       end
 
       it "redirects to the created listing" do
+        sign_in user
         post :create, params: {listing: valid_attributes}, session: valid_session
         expect(response).to redirect_to(Listing.last)
       end
@@ -88,6 +95,7 @@ RSpec.describe ListingsController, type: :controller do
 
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'new' template)" do
+        sign_in user
         post :create, params: {listing: invalid_attributes}, session: valid_session
         expect(response).to be_successful
       end
@@ -96,18 +104,21 @@ RSpec.describe ListingsController, type: :controller do
 
   describe "PUT #update" do
     context "with valid params" do
+      
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {name: "New Test Name"}
       }
 
       it "updates the requested listing" do
+        sign_in user
         listing = Listing.create! valid_attributes
         put :update, params: {id: listing.to_param, listing: new_attributes}, session: valid_session
         listing.reload
-        skip("Add assertions for updated state")
+        expect(listing.name).to eq("New Test Name")
       end
 
       it "redirects to the listing" do
+        sign_in user
         listing = Listing.create! valid_attributes
         put :update, params: {id: listing.to_param, listing: valid_attributes}, session: valid_session
         expect(response).to redirect_to(listing)
@@ -116,6 +127,7 @@ RSpec.describe ListingsController, type: :controller do
 
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'edit' template)" do
+        sign_in user
         listing = Listing.create! valid_attributes
         put :update, params: {id: listing.to_param, listing: invalid_attributes}, session: valid_session
         expect(response).to be_successful
@@ -125,6 +137,7 @@ RSpec.describe ListingsController, type: :controller do
 
   describe "DELETE #destroy" do
     it "destroys the requested listing" do
+      sign_in user
       listing = Listing.create! valid_attributes
       expect {
         delete :destroy, params: {id: listing.to_param}, session: valid_session
@@ -132,6 +145,7 @@ RSpec.describe ListingsController, type: :controller do
     end
 
     it "redirects to the listings list" do
+      sign_in user
       listing = Listing.create! valid_attributes
       delete :destroy, params: {id: listing.to_param}, session: valid_session
       expect(response).to redirect_to(listings_url)
