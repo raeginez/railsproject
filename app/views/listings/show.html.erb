@@ -5,26 +5,28 @@
   <%= @listing.category %>
 </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @listing.name %>
-</p>
+<div id="top-option">
+  <p>
+    <strong>Name:</strong>
+    <%= @listing.name %>
+  </p>
 
-<p>
-  <% if @listing.image.attached?%>
-  <%= image_tag @listing.image, width: 120 %>
-  <%end%>
-</p>
+  <p>
+    <% if @listing.image.attached?%>
+    <%= image_tag @listing.image, width: 120 %>
+    <%end%>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @listing.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @listing.description %>
+  </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @listing.price %>
-</p>
+  <p>
+    <strong>Price:</strong>
+    <%= @listing.price %>
+  </p>
+</div>
 
 <p>
   <%= link_to "Buy now", new_order_path(listing_id: @listing.id) %>

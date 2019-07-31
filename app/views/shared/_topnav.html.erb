@@ -1,4 +1,4 @@
-<div class="top-nav">
+<!--<div class="top-nav">
     <ul>
     <p><%= link_to "Home", root_path %> </p>
     <p><%= link_to "Flats", items_flats_path %> </p>
@@ -14,5 +14,47 @@
                 <div id="signup"><%= link_to 'Sign Up', new_user_registration_path, class:"top-nav-link"%></div>
         <% end %>
     </ul>
-</div>
+</div> -->
 
+<nav class="navbar is-transparent">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="">
+      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+    </a>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="">
+        <p><%= link_to "Home", root_path %> </p>
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="">
+          Items
+        </a>
+        <div class="navbar-dropdown is-boxed">
+          <p><%= link_to "Flats", items_flats_path %> </p>
+          <p><%= link_to "Boots", items_boots_path %> </p>
+          <p><%= link_to "heels", items_heels_path %> </p>
+          <p><%= link_to "Trainers", items_trainers_path %> </p>
+          </a>
+        </div>
+      </div>
+    </div>
+          <% if user_signed_in? %> 
+                <div id="logout"><%= link_to 'Logout', destroy_user_session_path, method: "delete",class:"top-nav-link"%></div>
+                <div id="username"><%= current_user.name %></div>
+                <% else %>
+                <div id="login"><%= link_to 'Login', new_user_session_path, class:"top-nav-link"%></div>
+                <div id="signup"><%= link_to 'Sign Up', new_user_registration_path, class:"top-nav-link"%></div>
+            <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
