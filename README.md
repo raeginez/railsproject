@@ -2,37 +2,79 @@
 
 ## A link (URL) to your published App
 
+Here is a link to our app: https://sheltered-ridge-97373.herokuapp.com/
 _____________________________________________________________________________________________
 
 ## A link to your GitHub repository
-
-_____________________________________________________________________________________________
-
-## Ensure the repo is accessible by your Educators
-
+Here is a link to our repo: https://github.com/raeginez/railsproject
 _____________________________________________________________________________________________
 
 ## Description of your project, including,
 
-_____________________________________________________________________________________________
 
-## Problem definition / purpose
+### Problem definition / purpose
+The purpose of this app is to sell your used shoes. You can also buy other peoples used shoes. This can help declutter your closet space and buy shoes at discounted prices.
 
-_____________________________________________________________________________________________
+### Functionality / features
+Our app allows a user to create an item to sell. It includes:
+● A Category
+● A Title
+● A Description
+● A Price
+● An Image
+Users are also able to edit and delete their listings.
 
-## Functionality / features
+It also allows a user to purchase other users shoes. They can find shoes by one of the following categories:
+● Boots
+● Flats
+● Trainers
+● Heels
 
-_____________________________________________________________________________________________
+### Screenshots
+Here are screenshots of our app:
 
-## Screenshots
+This is our Home page:
 
-_____________________________________________________________________________________________
+<!-- ![index page](docs/6-index.png "index page") -->
 
-## Tech stack (e.g. html, css, deployment platform, etc)
+This is our Sell Product page:
 
-_____________________________________________________________________________________________
+This is our Boots Category page:
 
-## Instructions on how to setup, configure and use your App.
+This is our Flats Category page:
+
+This is our Trainers Category page:
+
+This is our Heels Category page:
+
+This is our Checkout page:
+
+This is our Sign Up page:
+
+This is our Login page:
+
+This is our View Item page:
+
+This is our Edit Item page:
+
+This is our Delete Item page:
+
+### Tech stack (e.g. html, css, deployment platform, etc)
+Here is a list of the tech stacks we have used in our project:
+● Ruby on Rails
+● HTML
+● CSS
+● Heroku
+● Bulma
+● Heels
+
+Here is a list of the gems we have used in our project:
+● Devise
+● Stripe
+● Cloudinary
+● Rspec
+
+### Instructions on how to setup, configure and use your App.
 
 _____________________________________________________________________________________________
 
