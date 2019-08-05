@@ -17,4 +17,8 @@ class OrdersController < ApplicationController
     cancel_url: 'http://localhost:3000/orders/cancel',
     )
   end
+
+  def complete
+    redirect_to(root_path, notice: 'Thank you for your order')
+  end
 end
