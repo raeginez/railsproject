@@ -24,7 +24,7 @@ Our app allows a user to create an item to sell. It includes:
 - An Image
 - Users are also able to edit and delete their listings.
 
-It also allows a user to purchase other users shoes. They can find shoes by one of the following categories:
+It also allows a user to purchase other user's shoes. You can find shoes by one of the following categories:
 - Boots
 - Flats
 - Trainers
@@ -74,7 +74,31 @@ Here is a list of the gems we have used in our project:
 - Rspec
 
 ### Instructions on how to setup, configure and use your App.
-?
+
+Here are the steps required to setup, configure and use our app:
+
+1) Run bundle install (this will install all the required gems)
+2) Update the database.yml file with your credentials
+3) Run rails db:setup
+4) Run rails db:migrate
+5) Run rails s  (if you want to get the server started)
+To use our app you simply require a browser and internet connection. Here are some common steps you can follow when using our app:
+
+- Sign Up to New Account:
+  
+  On every page, in the top-right of the navigation bar, you can find a link to sign-up to a new account. Simply click on the link and follow the online instructions to get you signed up. Email and password are complusory fields.
+
+  - Logging In or Out of your Account:
+  
+  On every page, in the top-right of the navigation bar, you can find a link to log in or out of your account. Simply click on the link and fill in your credentials to get you logged in. Alternatively click on the log out link to log out of your account.
+
+  - Adding a Username:
+
+When signing up to create a new account, you have the option to create a username. This is an optional field.
+
+- Searching for an Item:
+
+You can view items for sale by selecting the category they would be listed in. Simply clicking on the images on the home page or Alternatively you can select the drop-down 'Items' link in the top navigation bar where you can find links to all aviable categories. (Future enhancement is to add a search function)
 ____________________________________________________________________________
 ## Our Design documentation:
 
@@ -126,6 +150,8 @@ Here are screenshots of our Trello Board:
 ![Trello Board - Day 5](docs/trello_day5.png "Trello Board - Day 5")
 
 ![Trello Board - Day 6](docs/trello_day6.png "Trello Board - Day 6")
+
+![Trello Board - Day 7](docs/trello_day7.png "Trello Board - Day 7")
 ____________________________________________________________________________
 
 ## Answers to the Short Answer questions (Section 2.2)
