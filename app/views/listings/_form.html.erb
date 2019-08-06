@@ -13,13 +13,13 @@
   
   <div class="field">
     <%= form.label :category %>
-    <%= form.select :category, options_for_select(["Please select...", "Flats", "Boots", "Trainers", "Heels"], selected: @listing.category) %>
+    <%= form.select :category, options_for_select(["Flats", "Boots", "Trainers", "Heels"],  selected: @listing.category), prompt: "Please select ...", required: true %>
   </div>
 
   <div class="field">
   <label class="label">Name</label>
   <div class="control">
-    <%= form.text_field :name, required: true, value: @listing.name, class: "input" %>
+    <%= form.text_field :name, required: true, value: @listing.name || "Enter name" , class: "input" %>
   </div>
   </div>
 
