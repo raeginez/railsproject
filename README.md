@@ -41,9 +41,9 @@ This is our Sign Up page:
 
 ![sign up page](docs/sign_up_page.png "sign up page")
 
-This is our Login page:
+This is our Log In page:
 
-![login page](docs/log_in_page.png "login page")
+![log in page](docs/log_in_page.png "log in page")
 
 This is our Sell Product page:
 
@@ -93,7 +93,7 @@ Here is a list of the tech stacks we have used in our project:
 - CSS3
 - Heroku
 - Bulma
-- Postgresql
+- PostgreSQL
 - JS
 
 Here is a list of the gems we have used in our project:
@@ -117,7 +117,7 @@ Here are the steps required to use our app:
 
 - Sign Up to New Account:
   
-  On every page, in the top-right of the navigation bar, you can find a link to sign-up to a new account. Simply click on the link and follow the online instructions to get you signed up. Email and password fields are complusory. Password setup requires a minumum of 6 characters.
+  On every page, in the top-right of the navigation bar, you can find a link to sign-up to a new account. Simply click on the link and follow the online instructions to get you signed up. Email and password fields are compulsory. Password setup requires a minimum of 6 characters.
 
 - Logging In or Out of your Account:
   
@@ -227,7 +227,7 @@ ____________________________________________________________________________
 
 ### (1) What is the need (i.e. challenge) that you will be addressing in your project?
 
-We have identified there is a need to buy and sell boutique used shoes in a convinient way online.
+We have identified there is a need to buy and sell boutique used shoes in a convenient way online.
 
 ### (2) Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?
 
@@ -243,7 +243,7 @@ Heroku's platform automatically routes the HTTP requests for our app's hostname 
 
 Once a connection has been established there is only a 30 second window for a response to be sent, else a H12 error will be logged.
 
-Heroku routing offers simultaneous connections by supporting multiple cocurrent connections.
+Heroku routing offers simultaneous connections by supporting multiple co-current connections.
 
 All info and error logs are stored in the Heroku router log format.
 
@@ -269,22 +269,22 @@ All info and error logs are stored in the Heroku router log format.
 
     We used Heroku for our online deployment
 
-6) Postgresql
+6) PostgreSQL
 
-    We used Postgresql for our database
+    We used PostgreSQL for our database
 
 ### (6) Identify the database to be used in your App and provide a justification for your choice.
-We have used Postgresql for our app's database. 
+We have used PostgreSQL for our app's database. 
 
-We decided to use Postgresql as it is free and open source. It also has many features and is highly extensible. 
+We decided to use PostgreSQL as it is free and open source. It also has many features and is highly extensible. 
 
 Another option we could have used was MySQL.
 
 ### (7) Identify and describe the production database setup (i.e. postgres instance).
 
-As we deloyed our app on Heroku's platform, we chose to use Postgresql for our production database. 
+As we deployed our app on Heroku's platform, we chose to use PostgreSQL for our production database. 
 
-When setting up our database we had to add our credetials into our database.yml file.
+When setting up our database we had to add our credentials into our database.yml file.
 
 ### (8) Describe the architecture of your App.
 
@@ -306,7 +306,7 @@ Here is our UML:
 ### (10) Detail any third party services that your App will use.
 1) Devise
   
-    We used Devise for user login and signup authentication
+    We used Devise for user login and sign-up authentication
 
 2) Stripe
 
@@ -329,7 +329,7 @@ Here is our UML:
 A similar marketplace to our app is EBay. We have the following similarities:
 
 - It is an online platform to buy and sell items (unlike EBay, we do not have an auction option)
-- You must be signed in (or new users canregister) to buy and sell items
+- You must be signed in (or new users can register) to buy and sell items
 - When adding a new item for sale, you fill out an online form (name, description, price, category, image)
 - Items for sale are sorted by categories
 - When purchasing an item, you are redirected to a secure online payment screen
@@ -340,9 +340,9 @@ Here is our ERD:
 
 ![ERD page](docs/ERD.png "ERD page")
 
-Our main database table is the Listings model. It has it's Primary key which identifies the item for sale. It also has a mandetory category from a drop down list (as a string). The Title (string), Price (decimal) and Image upload are also mandetory fields. The only optional field is the Description (text). Each item is linked to a User through a Foreign Key (see Users table).
+Our main database table is the Listings model. It has it's Primary key which identifies the item for sale. It also has a mandatory category from a drop down list (as a string). The Title (string), Price (decimal) and Image upload are also mandatory fields. The only optional field is the Description (text). Each item is linked to a User through a Foreign Key (see Users table).
 
-Our next database table is the Users model. It has it's Primary key which identifies the user who is buying or selling an item. This is linked to the item being sold (as a Foreign Key). The Username (string), Email (String) and Password (string) are all mandetory fields.
+Our next database table is the Users model. It has it's Primary key which identifies the user who is buying or selling an item. This is linked to the item being sold (as a Foreign Key). The Username (string), Email (String) and Password (string) are all mandatory fields.
 
 At the moment we do not have an Orders model as this is a future enhancement once we've implemented a shopping cart option.
 
@@ -357,7 +357,7 @@ Once we have implemented our future shopping cart we can add our Orders model wi
 - A User in our Users model can have many orders
 - Each Item in our Listings model belongs to an order
 - A User can have many Purchased Items through Orders
-- An Order can havde many Listings
+- An Order can have many Listings
 - An Order belongs to a Buyer (with a class_name of User)
 
 
@@ -398,7 +398,7 @@ Here are the steps we created and followed for using GitHub. (We added it into o
 ____________________________________________________________________________
 
 ### (20) Provide an overview and description of your Testing process.
-We used manual testing after adding each new feature. We also used rspec for our final testing. Here is the report of our test results:
+We used manual testing after adding each new feature. We also used Rspec for our final testing. Here is the report of our test results:
 
 ```
 
