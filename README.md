@@ -35,29 +35,55 @@ Here are screenshots of our app:
 
 This is our Home page:
 
-<!-- ![index page](docs/6-index.png "index page") -->
-
-This is our Sell Product page:
-
-This is our Boots Category page:
-
-This is our Flats Category page:
-
-This is our Trainers Category page:
-
-This is our Heels Category page:
-
-This is our Checkout page:
+![index page](docs/home_page.png "index page")
 
 This is our Sign Up page:
 
+![sign up page](docs/sign_up_page.png "sign up page")
+
 This is our Login page:
+
+![login page](docs/log_in_page.png "login page")
+
+This is our Sell Product page:
+
+![sell product page](docs/sell_product_page.png "sell product page")
+
+This is our Boots Category page:
+
+![boots page](docs/boots_page.png "boots page")
 
 This is our View Item page:
 
+![view listing page](docs/view_listing_page.png "view listing page")
+
+This is our Flats Category page:
+
+![flats page](docs/flats_page.png "flats page")
+
+This is our Buy Now page:
+
+![buy now page](docs/buy_now_page.png "buy now page")
+
+This is our Checkout page:
+
+![checkout now page](docs/checkout_now_page.png "checkout now page")
+
+This is our Trainers Category page:
+
+![trainers page](docs/trainers_page.png "trainers page")
+
 This is our Edit Item page:
 
+![edit listing page](docs/edit_listing_page.png "edit listing page")
+
+This is our Heels Category page:
+
+![heels page](docs/heels_page.png "heels page")
+
 This is our Delete Item page:
+
+![delete listing page](docs/delete_listing_page.png "delete listing page")
 
 ### Tech stack (e.g. html, css, deployment platform, etc)
 Here is a list of the tech stacks we have used in our project:
@@ -123,7 +149,16 @@ ____________________________________________________________________________
 ## Our Design documentation:
 
 ## Design process
-?
+These were the steps we took in our design process:
+
+1) Decided the two-way marketplace we were going to create was for expensive used shoes
+2) Came up with our project plan and timeline, breaking down important tasks and adding them to our Trello board
+3) Came up with our user stories
+4) Created our wireframes
+5) Designed our ERD
+6) Built our App
+7) Completed our Documentation
+8) Completed our Styling
 ____________________________________________________________________________
 
 ## User stories
@@ -181,6 +216,8 @@ Here are screenshots of our Trello Board:
 ![Trello Board - Day 6](docs/trello_day6.png "Trello Board - Day 6")
 
 ![Trello Board - Day 7](docs/trello_day7.png "Trello Board - Day 7")
+
+![Trello Board - Day 8](docs/trello_day8.png "Trello Board - Day 8")
 ____________________________________________________________________________
 
 ## Answers to the Short Answer questions (Section 2.2)
@@ -197,10 +234,12 @@ We have identified that many women have expensive shoes in their closet that the
 An online store that allows a user to buy and sell boutique shoes at a reduced price in a easy manner. Users are able to add, edit and delete their listings. Users are able to find and purchase other people's listings.
 
 ### (4) Describe the network infrastructure the App may be based on.
+We have used Heroku to deploy our app.
 
 ### (5) Identify and describe the software to be used in your App.
 
 ### (6) Identify the database to be used in your App and provide a justification for your choice.
+We have used Postgres for our app's database.
 
 ### (7) Identify and describe the production database setup (i.e. postgres instance).
 
@@ -209,6 +248,25 @@ An online store that allows a user to buy and sell boutique shoes at a reduced p
 ### (9) Explain the different high-level components (abstractions) in your App.
 
 ### (10) Detail any third party services that your App will use.
+1) Devise
+  
+    We used Devise for user login and signup authentication
+
+2) Stripe
+
+    We used Stripe for our secure online payment system
+
+3) Cloudinary
+
+    We used Cloudinary for user image upload
+
+4) Rspec
+
+    We used Rspec for our testing
+
+5) Heroku
+
+    We used Heroku for our online deployment
 
 ### (11) Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
 
