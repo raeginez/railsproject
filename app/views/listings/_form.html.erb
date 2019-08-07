@@ -19,7 +19,7 @@
   <div class="field">
   <label class="label">Name</label>
   <div class="control">
-    <%= form.text_field :name, required: true, value: @listing.name || "Enter name" , class: "input" %>
+    <%= form.text_field :name, required: true, value: @listing.name, class: "input" %>
   </div>
   </div>
 
@@ -30,7 +30,7 @@
 
   <div class="field">
     <%= form.label :image %>
-    <%= form.file_field :image %>
+    <%= form.file_field :image, required: true %>
   </div>
 
   <div class="field">
