@@ -238,12 +238,25 @@ We have used Heroku to deploy our app.
 
 ### (5) Identify and describe the software to be used in your App.
 
+- Rails Framework
+- Ruby and .erb files
+- HTML5
+- CSS3
+- Heroku
+- Bulma
+- PostGresql
+- JS
+
 ### (6) Identify the database to be used in your App and provide a justification for your choice.
 We have used Postgres for our app's database.
 
 ### (7) Identify and describe the production database setup (i.e. postgres instance).
 
+We used postgres for our database system 
+
 ### (8) Describe the architecture of your App.
+
+
 
 ### (9) Explain the different high-level components (abstractions) in your App.
 
@@ -260,11 +273,7 @@ We have used Postgres for our app's database.
 
     We used Cloudinary for user image upload
 
-4) Rspec
-
-    We used Rspec for our testing
-
-5) Heroku
+4) Heroku
 
     We used Heroku for our online deployment
 
