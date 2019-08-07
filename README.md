@@ -87,11 +87,14 @@ This is our Delete Item page:
 
 ### Tech stack (e.g. html, css, deployment platform, etc)
 Here is a list of the tech stacks we have used in our project:
-- Ruby on Rails
-- HTML
-- CSS
+- Ruby and .erb files
+- Rails Framework
+- HTML5
+- CSS3
 - Heroku
 - Bulma
+- Postgresql
+- JS
 
 Here is a list of the gems we have used in our project:
 - Devise
@@ -228,24 +231,77 @@ We have identified there is a need to buy and sell boutique used shoes in a conv
 
 ### (2) Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?
 
-We have identified that many women have expensive shoes in their closet that they no longer need or want. We though a great way to clear out your closet and make some extra cash was to sell your used shoes online. 
+We have identified that many women have expensive shoes in their closet that they no longer need or want. We thought a great way to clear out your closet and make some extra cash was to sell your used shoes online. 
 
 ### (3) Describe the project you will be conducting and how your App will address the needs.
 An online store that allows a user to buy and sell boutique shoes at a reduced price in a easy manner. Users are able to add, edit and delete their listings. Users are able to find and purchase other people's listings.
 
 ### (4) Describe the network infrastructure the App may be based on.
-We have used Heroku to deploy our app.
+We have used Heroku to deploy our app. 
+
+Heroku's platform automatically routes the HTTP requests for our app's hostname from Heroku's domain. 
+
+Once a connection has been established there is only a 30 second window for a response to be sent, else a H12 error will be logged.
+
+Heroku routing offers simultaneous connections by supporting multiple cocurrent connections.
+
+All info and error logs are stored in the Heroku router log format.
 
 ### (5) Identify and describe the software to be used in your App.
 
+1) Ruby (and .erb files)
+  
+    We used Ruby and .erb files in our app
+
+2) Rails Framework
+
+    We used Rails as our app's framework
+
+3) HTML5
+
+    We used HTML5 in our markup
+
+4) CSS3 & Bulma
+
+    We used CSS3 and Bulma for our styling
+
+5) Heroku
+
+    We used Heroku for our online deployment
+
+6) Postgresql
+
+    We used Postgresql for our database
+
 ### (6) Identify the database to be used in your App and provide a justification for your choice.
-We have used Postgres for our app's database.
+We have used Postgresql for our app's database. 
+
+We decided to use Postgresql as it is free and open source. It also has many features and is highly extensible. 
+
+Another option we could have used was MySQL.
 
 ### (7) Identify and describe the production database setup (i.e. postgres instance).
 
+As we deloyed our app on Heroku's platform, we chose to use Postgresql for our production database. 
+
+When setting up our database we had to add our credetials into our database.yml file.
+
 ### (8) Describe the architecture of your App.
 
+Here is our UML:  
+
+![UML page](docs/uml.png "UML page")
+
 ### (9) Explain the different high-level components (abstractions) in your App.
+
+1) From the Homepage you can login/ out or sign up
+  
+2) From the Homepage you can upload a product to sell (Sell Product link). You must be logged in to upload an item. You will be redirected to the log in page if you are not logged in
+
+3) From the Homepage you can search for products by category, either by clicking on the top navigation links or by clicking on the Homepage images
+   
+4) Once you have found an item you wish to purchase you can click on the Buy Now link. You must be logged in to purchase an item. You will be redirected to the log in page if you are not logged in.
+
 
 ### (10) Detail any third party services that your App will use.
 1) Devise
@@ -270,9 +326,40 @@ We have used Postgres for our app's database.
 
 ### (11) Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
 
+A similar marketplace to our app is EBay. We have the following similarities:
+
+- It is an online platform to buy and sell items (unlike EBay, we do not have an auction option)
+- You must be signed in (or new users canregister) to buy and sell items
+- When adding a new item for sale, you fill out an online form (name, description, price, category, image)
+- Items for sale are sorted by categories
+- When purchasing an item, you are redirected to a secure online payment screen
+
 ### (12) Discuss the database relations to be implemented.
 
+Here is our ERD:  
+
+![ERD page](docs/ERD.png "ERD page")
+
+Our main database table is the Listings model. It has it's Primary key which identifies the item for sale. It also has a mandetory category from a drop down list (as a string). The Title (string), Price (decimal) and Image upload are also mandetory fields. The only optional field is the Description (text). Each item is linked to a User through a Foreign Key (see Users table).
+
+Our next database table is the Users model. It has it's Primary key which identifies the user who is buying or selling an item. This is linked to the item being sold (as a Foreign Key). The Username (string), Email (String) and Password (string) are all mandetory fields.
+
+At the moment we do not have an Orders model as this is a future enhancement once we've implemented a shopping cart option.
+
+
 ### (13) Describe your project’s models in terms of the relationships (active record associations) they have with each other.
+
+- Each Item in our Listing model belongs to a user
+- A User in our Users model can have many listings
+
+Once we have implemented our future shopping cart we can add our Orders model with the following relationships:
+
+- A User in our Users model can have many orders
+- Each Item in our Listings model belongs to an order
+- A User can have many Purchased Items through Orders
+- An Order can havde many Listings
+- An Order belongs to a Buyer (with a class_name of User)
+
 
 ### (14) Provide your database schema design.
 Here is our ERD:
@@ -422,6 +509,12 @@ Finished in 1.8 seconds (files took 3.26 seconds to load)
 ```
 ____________________________________________________________________________
 ### (21) Discuss and analyse requirements related to information system security.
+At present we have the following security in place:
+
+- A user can only edit and delete their own listings
+- We have used Devise which authenticates users when they log in
+- We have used Cloudinary which protects users image uploads
+- We have used Stripe which provides a secure online payment platform for our users
 
 ### (22) Discuss methods you will use to protect information and data.
 We used Devise, Cloudinary and Stripe in our app. They each have their own systems in place to protect our users information and data. 
