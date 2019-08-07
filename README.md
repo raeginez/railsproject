@@ -223,6 +223,26 @@ Here are screenshots of our Trello Board:
 ![Trello Board - Day 8](docs/trello_day8.png "Trello Board - Day 8")
 ____________________________________________________________________________
 
+## Screenshots of Slack Communication
+Here are screenshots of our Slack Communication:
+
+![Slack - Day 1](docs/slack_day1.png "Slack - Day 1")
+
+![Slack - Day 2](docs/slack_day2.png "Slack - Day 2")
+
+![Slack - Day 3](docs/slack_day3.png "Slack - Day 3")
+
+![Slack - Day 4](docs/slack_day4.png "Slack - Day 4")
+
+![Slack - Day 5](docs/slack_day5.png "Slack - Day 5")
+
+![Slack - Day 6](docs/slack_day6.png "Slack - Day 6")
+
+![Slack - Day 7](docs/slack_day7.png "Slack - Day 7")
+
+![Slack - Day 8](docs/slack_day8.png "Slack - Day 8")
+____________________________________________________________________________
+
 ## Answers to the Short Answer questions (Section 2.2)
 
 ### (1) What is the need (i.e. challenge) that you will be addressing in your project?
