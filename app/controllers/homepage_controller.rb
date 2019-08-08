@@ -1,4 +1,5 @@
 class HomepageController < ApplicationController
+    #categories
     def home
     end
 
