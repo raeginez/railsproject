@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :listings
   has_many :orders
   
-  def name
+  def name 
     return username ? username : email
   end
 end

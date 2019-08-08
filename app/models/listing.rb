@@ -1,9 +1,8 @@
 class Listing < ApplicationRecord
-    # belongs_to :order
+    #validation
     belongs_to :user
-    # references :user, references :order
     has_one_attached :image
-    validates :name, presence: true
-    validates :price, presence: true
-    validates :category, presence: true
+    validates :name, presence: true #name cannot be empty
+    validates :price, presence: true #price cannot be empty
+    validates :category, presence: true #category cannot be empty
 end
