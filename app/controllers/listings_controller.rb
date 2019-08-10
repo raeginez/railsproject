@@ -33,7 +33,6 @@ class ListingsController < ApplicationController
     end
   end
 
-
   def update
     @listing = current_user.listings.find(params[:id])
     respond_to do |format|
@@ -46,7 +45,6 @@ class ListingsController < ApplicationController
       end
     end
   end
-
 
   def destroy
     @listing = current_user.listings.find(params[:id])
