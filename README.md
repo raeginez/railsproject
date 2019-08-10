@@ -308,11 +308,11 @@ Here is our UML:
 
 1) From the Homepage you can login/ out or sign up
   
-2) From the Homepage you can upload a product to sell (Sell Product link). You must be logged in to upload an item. You will be redirected to the log in page if you are not logged in
+2) From the Homepage you can upload a product to sell ('Sell Product' link). You must be logged in to upload an item. You will be redirected to the log in page if you are not logged in
 
 3) From the Homepage you can search for products by category, either by clicking on the top navigation links or by clicking on the Homepage images
    
-4) Once you have found an item you wish to purchase you can click on the Buy Now link. You must be logged in to purchase an item. You will be redirected to the log in page if you are not logged in.
+4) Once you have found an item you wish to purchase you can click on the 'Buy Now' link. You must be logged in to purchase an item. You will be redirected to the log in page if you are not logged in.
 
 
 ### (10) Detail any third party services that your App will use.
@@ -348,15 +348,15 @@ A similar marketplace to our app is EBay. We have the following similarities:
 
 ### (12) Discuss the database relations to be implemented.
 
-Here is our ERD:  
+*** Please see our ERD diagram in question 14 below *** 
 
-![ERD page](docs/ERD.png "ERD page")
+When designing our ERD we knew we had to create at least two main tables (models) - Users and Items (we called ours 'Listings'), each with their own Primary Key. We then decided on the relationships between these two tables and how to join them. For this we used a one-to-many association (one User can have many Listings). Here is a complete breakdown of each table:
 
 Our main database table is the Listings model. It has it's Primary key which identifies the item for sale. It also has a mandatory category from a drop down list (as a string). The Title (string), Price (decimal) and Image upload are also mandatory fields. The only optional field is the Description (text). Each item is linked to a User through a Foreign Key (see Users table).
 
 Our next database table is the Users model. It has it's Primary key which identifies the user who is buying or selling an item. This is linked to the item being sold (as a Foreign Key). The Username (string), Email (String) and Password (string) are all mandatory fields.
 
-At the moment we do not have an Orders model as this is a future enhancement once we've implemented a shopping cart option.
+Our ERD shows an Orders model which we are still to implement. Due to time constraints we focused on completing our MVP first. We wanted to show what the future ERD would look like and how the Orders model would be incorporated into our design once we've added in our future shopping cart option. 
 
 
 ### (13) Describe your project’s models in terms of the relationships (active record associations) they have with each other.
@@ -374,6 +374,7 @@ Once we have implemented our future shopping cart we can add our Orders model wi
 
 
 ### (14) Provide your database schema design.
+
 Here is our ERD:
 ![ERD](docs/ERD.png "ERD")
 
@@ -384,6 +385,11 @@ We do not have an orders model yet as this is a future enhancement once we have 
 Here is a list of our User Stories that we created on our Trello Board:
 
 ![user stories page](docs/User_Stories.png "user stories page")
+
+The following are future enhancements:
+- Searching for an item with a search function
+- A shopping cart where you can add multiple products
+- A quantity field where you can purchase multiple quantities of the same product
 ____________________________________________________________________________
 
 ### (16) Provide Wireframes for your App.
@@ -393,7 +399,14 @@ Here are our Wireframes:
 ____________________________________________________________________________
 
 ### (17) Describe the way tasks are allocated and tracked in your project.
-We broke up the major tasks with a project plan and timeline. We then created user stories and made sure we focused on completing our MVP first. Each morning we checked in with each other and decided which tasks each of us were going to complete for that day. We tracked our tasks and their priorities using our Trello Board. We also used Slack to communicate with each other.
+- We broke up the major tasks with a project plan and timeline (please see our 'Project Plan and Timeline' screenshot at the top of the ReadMe - under the 'Details of Planning Process' heading)
+  
+- We then created user stories and made sure we focused on completing our MVP first. (please see our 'User Stories' screenshot at the top of the ReadMe - under the 'Our Design Documentation' heading)
+  
+- Each morning we checked in with each other and decided which tasks each of us were going to complete for that day. We also used Slack to communicate with each other. (please see our 'Screenshots of Slack Communication' at the top of the ReadMe - under the 'Details of Planning Process' heading)
+  
+- We tracked our tasks and their priorities using our Trello Board. (please see our 'Screenshots of Trello Board(s)' at the top of the ReadMe - under the 'Details of Planning Process' heading)
+
 
 ### (18) Discuss how Agile methodology is being implemented in your project.
 After our main app was setup and deployed to Heroku, we used the following steps to implement new functionalities:
@@ -533,3 +546,10 @@ We used Devise, Cloudinary and Stripe in our app. They each have their own syste
 
 ### (23) Research what your legal obligations are in relation to handling user data.
 We have a legal obligation to ensure that we protect our users information and personal data. 
+
+If our users are EU citizens we need to ensure that we comply with the following data subject rights (GDPR regulation):
+
+- Consent: Users must give their consent as to how we use and store their personal data.
+- Breach Notification: Users must be notified if there's a privacy breach and we need to indicating exactly what data has been breached
+- Right to Access and Data Portability: Users have a right to request a copy of their personal details that we have on record at any time
+- Privacy by Design: Design systems with data protection in mind. This will ensure that your user's data is protected and also limiting access of personal data to unauthorised personnel
