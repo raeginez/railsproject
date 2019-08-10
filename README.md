@@ -1,12 +1,12 @@
 
 # Our Rails Project
 
-## A link (URL) to your published App:
+## A link (URL) to our published App:
 
 Here is a link to our app: https://sheltered-ridge-97373.herokuapp.com/
 ____________________________________________________________________________
 
-## A link to your GitHub repository:
+## A link to our GitHub repository:
 Here is a link to our repo: https://github.com/raeginez/railsproject
 ____________________________________________________________________________
 
@@ -14,7 +14,7 @@ ____________________________________________________________________________
 
 
 ### Problem definition / purpose
-The purpose of this app is to sell your used shoes. You can also buy other peoples used shoes. This can help declutter your closet space and buy shoes at discounted prices.
+The purpose of this app is to sell your high-end used shoes. You can also buy other people's high-end used shoes. This can help you to declutter your closet space as well as buy fashionable shoes at discounted prices.
 
 ### Functionality / features
 Our app allows a user to create an item to sell. It includes:
@@ -23,7 +23,7 @@ Our app allows a user to create an item to sell. It includes:
 - A Description
 - A Price
 - An Image
-- Users are also able to edit and delete their listings.
+- Users are able to edit and delete their own listings.
 
 It also allows a user to purchase other user's shoes. You can find shoes by one of the following categories:
 - Boots
@@ -38,57 +38,45 @@ This is our Home page:
 
 ![index page](docs/home_page.png "index page")
 
-This is our Sign Up page:
+These are our Sign Up and Log In pages:
 
 ![sign up page](docs/sign_up_page.png "sign up page")
 
-This is our Log In page:
-
 ![log in page](docs/log_in_page.png "log in page")
 
-This is our Sell Product page:
-
-![sell product page](docs/sell_product_page.png "sell product page")
-
-This is our Boots Category page:
+These are our Category pages:
 
 ![boots page](docs/boots_page.png "boots page")
+
+![flats page](docs/flats_page.png "flats page")
+
+![heels page](docs/heels_page.png "heels page")
+
+![trainers page](docs/trainers_page.png "trainers page")
 
 This is our View Item page:
 
 ![view listing page](docs/view_listing_page.png "view listing page")
 
-This is our Flats Category page:
-
-![flats page](docs/flats_page.png "flats page")
-
-This is our Buy Now page:
+These are our Buy Now and Checkout pages:
 
 ![buy now page](docs/buy_now_page.png "buy now page")
 
-This is our Checkout page:
-
 ![checkout now page](docs/checkout_now_page.png "checkout now page")
 
-This is our Trainers Category page:
+This is our Sell Product page:
 
-![trainers page](docs/trainers_page.png "trainers page")
+![sell product page](docs/sell_product_page.png "sell product page")
 
-This is our Edit Item page:
+These are our Edit Item and Delete Item pages:
 
 ![edit listing page](docs/edit_listing_page.png "edit listing page")
-
-This is our Heels Category page:
-
-![heels page](docs/heels_page.png "heels page")
-
-This is our Delete Item page:
 
 ![delete listing page](docs/delete_listing_page.png "delete listing page")
 
 ### Tech stack (e.g. html, css, deployment platform, etc)
 Here is a list of the tech stacks we have used in our project:
-- Ruby and .erb files
+- Ruby (including .erb files)
 - Rails Framework
 - HTML5
 - CSS3
@@ -103,7 +91,7 @@ Here is a list of the gems we have used in our project:
 - Cloudinary
 - Rspec
 
-### Instructions on how to setup, configure and use your App.
+### Instructions on how to setup, configure and use our App.
 
 Here are the steps required to setup and configure our app prior to use:
 
@@ -112,9 +100,8 @@ Here are the steps required to setup and configure our app prior to use:
 3) Run rails db:setup
 4) Run rails db:migrate
 5) Run rails s  (if you want to get the server started)
-To use our app you simply require a browser and internet connection. Here are some common steps you can follow when using our app:
-
-Here are the steps required to use our app:
+   
+To use our app you simply require a browser and internet connection. Here are the instructions to use our app:
 
 - Sign Up to New Account:
   
@@ -130,7 +117,7 @@ Here are the steps required to use our app:
 
 - Searching for an Item:
 
-  You can view items for sale by selecting their category. Simply clicking on the images on the home page or alternatively you can select the category links in the top navigation bar. (Future enhancement is to add a search function)
+  You can view items for sale by selecting their category. Simply click on the images on the home page or alternatively you can select the category links in the top navigation bar. (Future enhancement is to add a search function)
 
 - Purchasing an Item:
 
@@ -142,7 +129,7 @@ Here are the steps required to use our app:
   
   **Please note that you need to be logged in to sell an item.**
 
-  To sell your item, simply go to the 'Sell Product' link found in the top navigation bar. Upon clicking this link you will be redirected to a 'New Listing' form. Here you are able to select your category, fill in your item name, description, price and upload an image. When you click on the Submit button you will be redirected to an overview of your listing. Item Category, Name and Price are compulsory fields.
+  To sell your item, simply go to the 'Sell Product' link found in the top navigation bar. Upon clicking this link you will be redirected to a 'New Listing' form. Here you are able to select your category, fill in your item name, description, price and upload an image. When you click on the Submit button you will be redirected to an overview of your listing. Item Category, Name, Price and Image are compulsory fields.
 
 - Editing or Deleting your Item:
 
@@ -155,7 +142,7 @@ ____________________________________________________________________________
 ## Design process
 These were the steps we took in our design process:
 
-1) Decided the two-way marketplace we were going to create was for expensive used shoes
+1) Decided the two-way marketplace we were going to create was for expensive, high-end, used shoes
 2) Came up with our project plan and timeline, breaking down important tasks and adding them to our Trello board
 3) Came up with our user stories
 4) Created our wireframes
@@ -294,6 +281,8 @@ All info and error logs are stored in the Heroku router log format.
 
     We used PostgreSQL for our database
 
+We also used some Gems in our app. Please see question 10 for a detailed list.
+
 ### (6) Identify the database to be used in your App and provide a justification for your choice.
 We have used PostgreSQL for our app's database. 
 
@@ -306,6 +295,8 @@ Another option we could have used was MySQL.
 As we deployed our app on Heroku's platform, we chose to use PostgreSQL for our production database. 
 
 When setting up our database we had to add our credentials into our database.yml file.
+
+Our website allows a user to add, edit or delete an item online (through Heroku's platform). These changes are then updated in our production database where we can view and keep track of any changes made.
 
 ### (8) Describe the architecture of your App.
 
