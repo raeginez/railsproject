@@ -1,12 +1,12 @@
 
 # Our Rails Project
 
-## A link (URL) to your published App:
+## A link (URL) to our published App:
 
 Here is a link to our app: https://sheltered-ridge-97373.herokuapp.com/
 ____________________________________________________________________________
 
-## A link to your GitHub repository:
+## A link to our GitHub repository:
 Here is a link to our repo: https://github.com/raeginez/railsproject
 ____________________________________________________________________________
 
@@ -14,7 +14,7 @@ ____________________________________________________________________________
 
 
 ### Problem definition / purpose
-The purpose of this app is to sell your used shoes. You can also buy other peoples used shoes. This can help declutter your closet space and buy shoes at discounted prices.
+The purpose of this app is to sell your high-end used shoes. You can also buy other people's high-end used shoes. This can help you to declutter your closet space as well as buy fashionable shoes at discounted prices.
 
 ### Functionality / features
 Our app allows a user to create an item to sell. It includes:
@@ -23,7 +23,7 @@ Our app allows a user to create an item to sell. It includes:
 - A Description
 - A Price
 - An Image
-- Users are also able to edit and delete their listings.
+- Users are able to edit and delete their own listings.
 
 It also allows a user to purchase other user's shoes. You can find shoes by one of the following categories:
 - Boots
@@ -38,57 +38,45 @@ This is our Home page:
 
 ![index page](docs/home_page.png "index page")
 
-This is our Sign Up page:
+These are our Sign Up and Log In pages:
 
 ![sign up page](docs/sign_up_page.png "sign up page")
 
-This is our Log In page:
-
 ![log in page](docs/log_in_page.png "log in page")
 
-This is our Sell Product page:
-
-![sell product page](docs/sell_product_page.png "sell product page")
-
-This is our Boots Category page:
+These are our Category pages:
 
 ![boots page](docs/boots_page.png "boots page")
+
+![flats page](docs/flats_page.png "flats page")
+
+![heels page](docs/heels_page.png "heels page")
+
+![trainers page](docs/trainers_page.png "trainers page")
 
 This is our View Item page:
 
 ![view listing page](docs/view_listing_page.png "view listing page")
 
-This is our Flats Category page:
-
-![flats page](docs/flats_page.png "flats page")
-
-This is our Buy Now page:
+These are our Buy Now and Checkout pages:
 
 ![buy now page](docs/buy_now_page.png "buy now page")
 
-This is our Checkout page:
-
 ![checkout now page](docs/checkout_now_page.png "checkout now page")
 
-This is our Trainers Category page:
+This is our Sell Product page:
 
-![trainers page](docs/trainers_page.png "trainers page")
+![sell product page](docs/sell_product_page.png "sell product page")
 
-This is our Edit Item page:
+These are our Edit Item and Delete Item pages:
 
 ![edit listing page](docs/edit_listing_page.png "edit listing page")
-
-This is our Heels Category page:
-
-![heels page](docs/heels_page.png "heels page")
-
-This is our Delete Item page:
 
 ![delete listing page](docs/delete_listing_page.png "delete listing page")
 
 ### Tech stack (e.g. html, css, deployment platform, etc)
 Here is a list of the tech stacks we have used in our project:
-- Ruby and .erb files
+- Ruby (including .erb files)
 - Rails Framework
 - HTML5
 - CSS3
@@ -103,7 +91,7 @@ Here is a list of the gems we have used in our project:
 - Cloudinary
 - Rspec
 
-### Instructions on how to setup, configure and use your App.
+### Instructions on how to setup, configure and use our App.
 
 Here are the steps required to setup and configure our app prior to use:
 
@@ -112,9 +100,8 @@ Here are the steps required to setup and configure our app prior to use:
 3) Run rails db:setup
 4) Run rails db:migrate
 5) Run rails s  (if you want to get the server started)
-To use our app you simply require a browser and internet connection. Here are some common steps you can follow when using our app:
-
-Here are the steps required to use our app:
+   
+To use our app you simply require a browser and internet connection. Here are the instructions to use our app:
 
 - Sign Up to New Account:
   
@@ -130,7 +117,7 @@ Here are the steps required to use our app:
 
 - Searching for an Item:
 
-  You can view items for sale by selecting their category. Simply clicking on the images on the home page or alternatively you can select the category links in the top navigation bar. (Future enhancement is to add a search function)
+  You can view items for sale by selecting their category. Simply click on the images on the home page or alternatively you can select the category links in the top navigation bar. (Future enhancement is to add a search function)
 
 - Purchasing an Item:
 
@@ -142,7 +129,7 @@ Here are the steps required to use our app:
   
   **Please note that you need to be logged in to sell an item.**
 
-  To sell your item, simply go to the 'Sell Product' link found in the top navigation bar. Upon clicking this link you will be redirected to a 'New Listing' form. Here you are able to select your category, fill in your item name, description, price and upload an image. When you click on the Submit button you will be redirected to an overview of your listing. Item Category, Name and Price are compulsory fields.
+  To sell your item, simply go to the 'Sell Product' link found in the top navigation bar. Upon clicking this link you will be redirected to a 'New Listing' form. Here you are able to select your category, fill in your item name, description, price and upload an image. When you click on the Submit button you will be redirected to an overview of your listing. Item Category, Name, Price and Image are compulsory fields.
 
 - Editing or Deleting your Item:
 
@@ -155,7 +142,7 @@ ____________________________________________________________________________
 ## Design process
 These were the steps we took in our design process:
 
-1) Decided the two-way marketplace we were going to create was for expensive used shoes
+1) Decided the two-way marketplace we were going to create was for expensive, high-end, used shoes
 2) Came up with our project plan and timeline, breaking down important tasks and adding them to our Trello board
 3) Came up with our user stories
 4) Created our wireframes
@@ -294,6 +281,8 @@ All info and error logs are stored in the Heroku router log format.
 
     We used PostgreSQL for our database
 
+We also used some Gems in our app. Please see question 10 for a detailed list.
+
 ### (6) Identify the database to be used in your App and provide a justification for your choice.
 We have used PostgreSQL for our app's database. 
 
@@ -307,6 +296,8 @@ As we deployed our app on Heroku's platform, we chose to use PostgreSQL for our 
 
 When setting up our database we had to add our credentials into our database.yml file.
 
+Our website allows a user to add, edit or delete an item online (through Heroku's platform). These changes are then updated in our production database where we can view and keep track of any changes made.
+
 ### (8) Describe the architecture of your App.
 
 Here is our UML:  
@@ -317,11 +308,11 @@ Here is our UML:
 
 1) From the Homepage you can login/ out or sign up
   
-2) From the Homepage you can upload a product to sell (Sell Product link). You must be logged in to upload an item. You will be redirected to the log in page if you are not logged in
+2) From the Homepage you can upload a product to sell ('Sell Product' link). You must be logged in to upload an item. You will be redirected to the log in page if you are not logged in
 
 3) From the Homepage you can search for products by category, either by clicking on the top navigation links or by clicking on the Homepage images
    
-4) Once you have found an item you wish to purchase you can click on the Buy Now link. You must be logged in to purchase an item. You will be redirected to the log in page if you are not logged in.
+4) Once you have found an item you wish to purchase you can click on the 'Buy Now' link. You must be logged in to purchase an item. You will be redirected to the log in page if you are not logged in.
 
 
 ### (10) Detail any third party services that your App will use.
@@ -357,15 +348,15 @@ A similar marketplace to our app is EBay. We have the following similarities:
 
 ### (12) Discuss the database relations to be implemented.
 
-Here is our ERD:  
+*** Please see our ERD diagram in question 14 below *** 
 
-![ERD page](docs/ERD.png "ERD page")
+When designing our ERD we knew we had to create at least two main tables (models) - Users and Items (we called ours 'Listings'), each with their own Primary Key. We then decided on the relationships between these two tables and how to join them. For this we used a one-to-many association (one User can have many Listings). Here is a complete breakdown of each table:
 
 Our main database table is the Listings model. It has it's Primary key which identifies the item for sale. It also has a mandatory category from a drop down list (as a string). The Title (string), Price (decimal) and Image upload are also mandatory fields. The only optional field is the Description (text). Each item is linked to a User through a Foreign Key (see Users table).
 
 Our next database table is the Users model. It has it's Primary key which identifies the user who is buying or selling an item. This is linked to the item being sold (as a Foreign Key). The Username (string), Email (String) and Password (string) are all mandatory fields.
 
-At the moment we do not have an Orders model as this is a future enhancement once we've implemented a shopping cart option.
+Our ERD shows an Orders model which we are still to implement. Due to time constraints we focused on completing our MVP first. We wanted to show what the future ERD would look like and how the Orders model would be incorporated into our design once we've added in our future shopping cart option. 
 
 
 ### (13) Describe your project’s models in terms of the relationships (active record associations) they have with each other.
@@ -383,6 +374,7 @@ Once we have implemented our future shopping cart we can add our Orders model wi
 
 
 ### (14) Provide your database schema design.
+
 Here is our ERD:
 ![ERD](docs/ERD.png "ERD")
 
@@ -393,6 +385,11 @@ We do not have an orders model yet as this is a future enhancement once we have 
 Here is a list of our User Stories that we created on our Trello Board:
 
 ![user stories page](docs/User_Stories.png "user stories page")
+
+The following are future enhancements:
+- Searching for an item with a search function
+- A shopping cart where you can add multiple products
+- A quantity field where you can purchase multiple quantities of the same product
 ____________________________________________________________________________
 
 ### (16) Provide Wireframes for your App.
@@ -402,7 +399,14 @@ Here are our Wireframes:
 ____________________________________________________________________________
 
 ### (17) Describe the way tasks are allocated and tracked in your project.
-We broke up the major tasks with a project plan and timeline. We then created user stories and made sure we focused on completing our MVP first. Each morning we checked in with each other and decided which tasks each of us were going to complete for that day. We tracked our tasks and their priorities using our Trello Board. We also used Slack to communicate with each other.
+- We broke up the major tasks with a project plan and timeline (please see our 'Project Plan and Timeline' screenshot at the top of the ReadMe - under the 'Details of Planning Process' heading)
+  
+- We then created user stories and made sure we focused on completing our MVP first. (please see our 'User Stories' screenshot at the top of the ReadMe - under the 'Our Design Documentation' heading)
+  
+- Each morning we checked in with each other and decided which tasks each of us were going to complete for that day. We also used Slack to communicate with each other. (please see our 'Screenshots of Slack Communication' at the top of the ReadMe - under the 'Details of Planning Process' heading)
+  
+- We tracked our tasks and their priorities using our Trello Board. (please see our 'Screenshots of Trello Board(s)' at the top of the ReadMe - under the 'Details of Planning Process' heading)
+
 
 ### (18) Discuss how Agile methodology is being implemented in your project.
 After our main app was setup and deployed to Heroku, we used the following steps to implement new functionalities:
@@ -542,3 +546,10 @@ We used Devise, Cloudinary and Stripe in our app. They each have their own syste
 
 ### (23) Research what your legal obligations are in relation to handling user data.
 We have a legal obligation to ensure that we protect our users information and personal data. 
+
+If our users are EU citizens we need to ensure that we comply with the following data subject rights (GDPR regulation):
+
+- Consent: Users must give their consent as to how we use and store their personal data.
+- Breach Notification: Users must be notified if there's a privacy breach and we need to indicating exactly what data has been breached
+- Right to Access and Data Portability: Users have a right to request a copy of their personal details that we have on record at any time
+- Privacy by Design: Design systems with data protection in mind. This will ensure that your user's data is protected and also limiting access of personal data to unauthorised personnel
