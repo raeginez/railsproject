@@ -13,8 +13,8 @@ class OrdersController < ApplicationController
     currency: 'aud',
     quantity: 1,
     }],
-    success_url: 'http://localhost:3000/orders/complete',
-    cancel_url: 'http://localhost:3000/orders/cancel',
+    success_url: orders_complete_url,
+    cancel_url: listings_url,
     )
   end
 
