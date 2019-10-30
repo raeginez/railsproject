@@ -63,7 +63,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Adding in Devise Gem for User Authentication
-gem "devise", "~> 4.6"
+gem "devise", "~> 4.7"
 
 # Adding in Cloudinary and Active-Storage Gems for User to upoad Images
 gem 'cloudinary', require: true
